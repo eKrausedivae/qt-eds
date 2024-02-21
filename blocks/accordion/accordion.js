@@ -1,9 +1,9 @@
 export default function decorate(block) {
   [...block.children].forEach((currentRow, index) => {
     const currentTitle = currentRow.firstElementChild;
-    currentTitle.className = 'accordion-title';
+    currentTitle.classList.add('accordion-title');
     const currentContent = currentRow.lastElementChild;
-    currentContent.className = 'accordion-content';
+    currentContent.classList.add('accordion-content');
 
     if (index === 0) {
       currentRow.classList.add('accordion-active');
